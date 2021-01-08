@@ -8,26 +8,56 @@
 import XCTest
 @testable import UIView_Shimmer
 
-class UIView_ShimmerTests: XCTestCase {
+final class UIView_ShimmerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testAllTemplateViewsReturnRelatedViewsInView() {
+        // Given
+        let mainView = UIView()
+        let view1 = ACustomView()
+        mainView.addSubview(view1)
+        let view2 = ACustomView()
+        mainView.addSubview(view2)
+        
+        let aButton = UIButton()
+        let aLabel = UILabel()
+        let stackView = UIStackView(arrangedSubviews: [aButton, aLabel])
+        mainView.addSubview(stackView)
+        
+        // When
+        let expectedViews = mainView.allTemplateViews
+        
+        // Then
+        XCTAssertEqual([view1, view2, aButton, aLabel], expectedViews)
     }
+    
+    func testSetShimmeringAnimationWithSubviewsAddsAndRemovesSubLayers() {
+        // Given
+        let aButton = UIButton()
+        let aLabel = UILabel()
+        let stackView = UIStackView(arrangedSubviews: [aButton, aLabel])
+        
+        // When
+        stackView.setShimmeringAnimationWithSubviews(template: true, color: .white)
+        
+        // Then
+        XCTAssertNotNil(aButton.layer.sublayers?.first(where: { $0.name == Key.template }))
+        XCTAssertNotNil(aButton.layer.sublayers?.first(where: { $0.name == Key.shimmer }))
+        XCTAssertNotNil(aLabel.layer.sublayers?.first(where: { $0.name == Key.template }))
+        XCTAssertNotNil(aLabel.layer.sublayers?.first(where: { $0.name == Key.shimmer }))
+        
+        // When
+        stackView.setShimmeringAnimationWithSubviews(template: false)
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        // Then
+        XCTAssertNil(aButton.layer.sublayers?.first(where: { $0.name == Key.template }))
+        XCTAssertNil(aButton.layer.sublayers?.first(where: { $0.name == Key.shimmer }))
+        XCTAssertNil(aLabel.layer.sublayers?.first(where: { $0.name == Key.template }))
+        XCTAssertNil(aLabel.layer.sublayers?.first(where: { $0.name == Key.shimmer }))
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
+
+fileprivate final class ACustomView: UIView, ShimmeringViewProtocol { }
+
+extension UIButton: ShimmeringViewProtocol { }
+
+extension UILabel: ShimmeringViewProtocol { }

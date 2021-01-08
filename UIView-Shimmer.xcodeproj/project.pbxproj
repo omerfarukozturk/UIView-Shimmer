@@ -16,6 +16,10 @@
 		17FE78CF25A8E73E00E29BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FE78CD25A8E73E00E29BF4 /* Main.storyboard */; };
 		17FE78D125A8E74100E29BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FE78D025A8E74100E29BF4 /* Assets.xcassets */; };
 		17FE78D425A8E74100E29BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FE78D225A8E74100E29BF4 /* LaunchScreen.storyboard */; };
+		17FE78DD25A8ECA800E29BF4 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE78DC25A8ECA800E29BF4 /* UIView+Extensions.swift */; };
+		17FE78E225A8ED5A00E29BF4 /* UIView+Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE78E125A8ED5A00E29BF4 /* UIView+Template.swift */; };
+		17FE78EA25A8ED8D00E29BF4 /* UIView+Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE78E925A8ED8D00E29BF4 /* UIView+Shimmer.swift */; };
+		17FE78EF25A8F42000E29BF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE78EE25A8F42000E29BF4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,10 @@
 		17FE78D025A8E74100E29BF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17FE78D325A8E74100E29BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17FE78D525A8E74100E29BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17FE78DC25A8ECA800E29BF4 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		17FE78E125A8ED5A00E29BF4 /* UIView+Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Template.swift"; sourceTree = "<group>"; };
+		17FE78E925A8ED8D00E29BF4 /* UIView+Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmer.swift"; sourceTree = "<group>"; };
+		17FE78EE25A8F42000E29BF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +102,10 @@
 		17FE78A525A8E65000E29BF4 /* UIView-Shimmer */ = {
 			isa = PBXGroup;
 			children = (
+				17FE78F325A8F42400E29BF4 /* UIView+Extensions */,
 				17FE78A625A8E65000E29BF4 /* UIView_Shimmer.h */,
 				17FE78A725A8E65000E29BF4 /* Info.plist */,
+				17FE78EE25A8F42000E29BF4 /* Constants.swift */,
 			);
 			path = "UIView-Shimmer";
 			sourceTree = "<group>";
@@ -121,6 +131,16 @@
 				17FE78D525A8E74100E29BF4 /* Info.plist */,
 			);
 			path = ShimmerExamples;
+			sourceTree = "<group>";
+		};
+		17FE78F325A8F42400E29BF4 /* UIView+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17FE78DC25A8ECA800E29BF4 /* UIView+Extensions.swift */,
+				17FE78E125A8ED5A00E29BF4 /* UIView+Template.swift */,
+				17FE78E925A8ED8D00E29BF4 /* UIView+Shimmer.swift */,
+			);
+			path = "UIView+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +221,7 @@
 				TargetAttributes = {
 					17FE78A225A8E65000E29BF4 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					17FE78AB25A8E65100E29BF4 = {
 						CreatedOnToolsVersion = 12.2;
@@ -262,6 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17FE78E225A8ED5A00E29BF4 /* UIView+Template.swift in Sources */,
+				17FE78DD25A8ECA800E29BF4 /* UIView+Extensions.swift in Sources */,
+				17FE78EA25A8ED8D00E29BF4 /* UIView+Shimmer.swift in Sources */,
+				17FE78EF25A8F42000E29BF4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +463,7 @@
 		17FE78B825A8E65100E29BF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9PU6D47W39;
@@ -456,6 +482,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,6 +491,7 @@
 		17FE78B925A8E65100E29BF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9PU6D47W39;
@@ -490,6 +518,7 @@
 		17FE78BB25A8E65100E29BF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PU6D47W39;
 				INFOPLIST_FILE = "UIView-ShimmerTests/Info.plist";
@@ -508,6 +537,7 @@
 		17FE78BC25A8E65100E29BF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PU6D47W39;
 				INFOPLIST_FILE = "UIView-ShimmerTests/Info.plist";
