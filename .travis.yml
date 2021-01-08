@@ -3,7 +3,7 @@ language: objective-c
 osx_image: xcode12.2
 env:
   matrix:
-    - TEST_SDK=iphonesimulator14.2 OS=13.1 NAME='iPhone XR'
+    - TEST_SDK=iphonesimulator14.2 OS=13.3 NAME='iPhone 11'
 
 script:
   - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project UIView-Shimmer.xcodeproj -scheme UIView-Shimmer -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
