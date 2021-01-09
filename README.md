@@ -59,11 +59,9 @@ extension UITextView: ShimmeringViewProtocol { }
 view.setShimmeringAnimationWithSubviews(template: true, superviewBackgroundColor: .systemBackground)
 ```
 
-### Light Theme
-![Shimmer animation for dark theme](Resources/shimmer_animation_light.gif)
-
-### Dark Theme
-![Shimmer animation for dark theme](Resources/shimmer_animation_dark.gif)
+Light Theme                | Dark Theme
+:-------------------------:|:-------------------------:
+![Shimmer animation for dark theme](Resources/shimmer_animation_light.gif)  |  ![Shimmer animation for dark theme](Resources/shimmer_animation_dark.gif)
 
 
 ## Example 
