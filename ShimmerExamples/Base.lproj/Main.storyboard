@@ -102,6 +102,7 @@
                                     <constraints>
                                         <constraint firstItem="I2l-0c-Aop" firstAttribute="leading" secondItem="xLZ-uZ-IIL" secondAttribute="trailing" constant="10" id="H93-a8-9PP"/>
                                         <constraint firstItem="r8T-dX-p1s" firstAttribute="leading" secondItem="LuS-08-Hwn" secondAttribute="leading" constant="10" id="LRx-le-Kte"/>
+                                        <constraint firstItem="LW2-aB-ITv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3bY-P1-BCy" secondAttribute="trailing" constant="10" id="TI7-3m-WkD"/>
                                         <constraint firstItem="3bY-P1-BCy" firstAttribute="top" secondItem="xLZ-uZ-IIL" secondAttribute="bottom" constant="8" symbolic="YES" id="XY8-Tl-cp1"/>
                                         <constraint firstItem="xLZ-uZ-IIL" firstAttribute="top" secondItem="LuS-08-Hwn" secondAttribute="top" constant="20" symbolic="YES" id="ahV-I6-4Pd"/>
                                         <constraint firstAttribute="trailing" secondItem="I2l-0c-Aop" secondAttribute="trailing" constant="20" symbolic="YES" id="awR-pP-vSh"/>
@@ -137,7 +138,7 @@
     </scenes>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

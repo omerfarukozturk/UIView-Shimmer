@@ -57,6 +57,7 @@ final class SampleDetailViewController: UIViewController {
     
     let sampleProgressView: UIProgressView = {
         let view = UIProgressView()
+        view.progressTintColor = .systemIndigo
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 300).isActive = true
         view.progress = 0.7
@@ -80,6 +81,7 @@ final class SampleDetailViewController: UIViewController {
     
     let sampleSlider: UISlider = {
         let view = UISlider()
+        view.minimumTrackTintColor = .systemYellow
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 300).isActive = true
         view.setValue(0.3, animated: false)
