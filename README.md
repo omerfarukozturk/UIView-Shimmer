@@ -14,7 +14,7 @@
 ## Installation
 
 ### Manuel
-> Copy related extensions to your project.
+If you do not want to add extra dependency, just copy related extensions to your project.
 
 ```
 UIView+Extensions.swift
@@ -30,7 +30,7 @@ pod 'UIView-Shimmer', '~> 1.0'
 
 ## Usage 
 
-> Conform any view to `ShimmeringViewProtocol` which identifies that shimmering animation will be applied to it or specified subviews. Define which subviews are animated in `shimmeringAnimatedItems`.
+Conform any view to `ShimmeringViewProtocol` which identifies that shimmering animation will be applied to it or specified subviews. Define which subviews are animated in `shimmeringAnimatedItems`.
 
 ```swift
 final class SampleTableViewCell: UITableViewCell, ShimmeringViewProtocol {
@@ -51,11 +51,9 @@ final class SampleTableViewCell: UITableViewCell, ShimmeringViewProtocol {
         ]
     }
 }
-
-
 ```
 
-> Or alternatively you can define that a type of view will be animated just extending `ShimmeringViewProtocol`
+Or alternatively you can define that a type of view will be animated just extending `ShimmeringViewProtocol`
 
 ```swift
 extension UILabel: ShimmeringViewProtocol { }
@@ -64,7 +62,7 @@ extension UITextView: ShimmeringViewProtocol { }
 ... 
 ```
 
-> Then call `setShimmeringAnimationWithSubviews(template:superviewBackgroundColor:)` extension of `UIView` for any view (basically a superview). This function finds all descendand subviews to be set as template and applies animation.
+Then call `setShimmeringAnimationWithSubviews(template:superviewBackgroundColor:)` extension of `UIView` for any view (basically a superview). This function finds all descendand subviews to be set as template and applies animation.
 
 ```swift
 view.setShimmeringAnimationWithSubviews(template: true, superviewBackgroundColor: .systemBackground)
