@@ -31,7 +31,7 @@ final class SampleDetailViewController: UIViewController {
        
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        view.setShimmeringAnimationWithSubviews(template: true, color: .systemBackground)
+        view.setShimmeringAnimationWithSubviews(template: true, superviewBackgroundColor: .systemBackground)
     }
     
     private let sampleLabel: UILabel = {

@@ -55,7 +55,7 @@ final class SampleTableViewController: UITableViewController {
          
          or specify it with `color` parameter.
          */
-        cell.setShimmeringAnimationWithSubviews(template: isLoading, color: .systemBackground)
+        cell.setShimmeringAnimationWithSubviews(template: isLoading, superviewBackgroundColor: .systemBackground)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
