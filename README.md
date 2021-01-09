@@ -1,13 +1,19 @@
 # UIView-Shimmer
 
 [![Build Status](https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master)](https://travis-ci.com/omerfarukozturk/UIView-Shimmer)
+![](https://img.shields.io/github/license/omerfarukozturk/UIView-Shimmer)
+![CocaPods Compatible](https://img.shields.io/badge/pod-v1.0-green)
 
 > Simple way to apply shimmering effect to any UIView.
 
+## Requirements
+
+* iOS 10+
 
 
 ## Installation
 
+### Manuel
 > Copy related extensions to your project.
 
 ```
@@ -16,6 +22,11 @@ UIView+Template.swift
 UIView+Shimmer.swift
 ```
 
+### CocoaPods
+
+```ruby
+pod 'UIView-Shimmer', '~> 1.0'
+```
 
 ## Usage 
 
