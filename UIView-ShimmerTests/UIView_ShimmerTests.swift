@@ -37,7 +37,7 @@ final class UIView_ShimmerTests: XCTestCase {
         let stackView = UIStackView(arrangedSubviews: [aButton, aLabel])
         
         // When
-        stackView.setShimmeringAnimationWithSubviews(template: true, color: .white)
+        stackView.setShimmeringAnimationWithSubviews(template: true, superviewBackgroundColor: .white)
         
         // Then
         XCTAssertNotNil(aButton.layer.sublayers?.first(where: { $0.name == Key.template }))
