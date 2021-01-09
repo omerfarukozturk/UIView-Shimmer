@@ -1,7 +1,8 @@
 # UIView-Shimmer
 
 [![Build Status](https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master)](https://travis-ci.com/omerfarukozturk/UIView-Shimmer)
-![](https://img.shields.io/github/license/omerfarukozturk/UIView-Shimmer)
+![Platform: iOS](https://img.shields.io/badge/platform-ios-blue)
+![License](https://img.shields.io/github/license/omerfarukozturk/UIView-Shimmer)
 ![CocaPods Compatible](https://img.shields.io/badge/pod-v1.0-green)
 
 > Simple way to apply shimmering effect to any UIView.
@@ -75,7 +76,7 @@ view.setShimmeringAnimationWithSubviews(template: true, superviewBackgroundColor
 
 Light Theme                | Dark Theme
 :-------------------------:|:-------------------------:
-![Shimmer animation for dark theme](Resources/shimmer_animation_light.gif)  |  ![Shimmer animation for dark theme](Resources/shimmer_animation_dark.gif)
+![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animation_light.gif)  |  ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animation_dark.gif)
 
 
 ## Example 
