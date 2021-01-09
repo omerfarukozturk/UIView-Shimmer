@@ -9,7 +9,7 @@ import UIKit
 
 extension UIView {
     
-    func setTemplate(_ isTemplate: Bool, baseColor: UIColor? = nil) {
+    public func setTemplate(_ isTemplate: Bool, baseColor: UIColor? = nil) {
         var color: UIColor
         if let baseColor = baseColor {
             color = baseColor
@@ -34,6 +34,9 @@ extension UIView {
         templateLayer.name = Key.template
         var templateFrame: CGRect!
         
+        setNeedsLayout()
+        layoutIfNeeded()
+        
         if let label = self as? UILabel {
             let width: CGFloat = intrinsicContentSize.width
             var horizontalX: CGFloat!
@@ -51,7 +54,7 @@ extension UIView {
             templateFrame = bounds
         }
         
-        let cornerRadius: CGFloat = max(layer.cornerRadius, 5)
+        let cornerRadius: CGFloat = max(layer.cornerRadius, min(bounds.height/2,5))
         
         let maskLayer = CAShapeLayer()
         let ovalPath = UIBezierPath(roundedRect: templateFrame, cornerRadius: cornerRadius)

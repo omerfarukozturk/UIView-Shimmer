@@ -30,10 +30,10 @@ extension UIView {
         subviews.forEach { $0.getSubShimmerViews(&views) }
     }
     
-    public func setShimmeringAnimationWithSubviews(template: Bool, color: UIColor? = nil) {
+    public func setShimmeringAnimationWithSubviews(template: Bool, superviewBackgroundColor: UIColor? = nil) {
         allTemplateViews.forEach {
             $0.setTemplate(template)
-            $0.setShimmeringAnimation(template, baseColor: color)
+            $0.setShimmeringAnimation(template, superviewBackgroundColor: superviewBackgroundColor)
         }
     }
 }
