@@ -88,7 +88,7 @@ Light Theme                | Dark Theme
 
 
 ## Example 
-The exmple project demonstrates hot to use it. Check [ShimmerExamples](/ShimmerExamples).
+The exmple project demonstrates how to use it. Pull the repo and check [ShimmerExamples](/ShimmerExamples).
 
 ## License
-UIView-Shimmer is available under the MIT license. See the LICENSE file for more info.
+UIView-Shimmer is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
