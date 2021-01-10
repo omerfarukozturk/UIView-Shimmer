@@ -99,6 +99,14 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		17A5980725AB1A8500CEC83B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				17FE78A725A8E65000E29BF4 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		17FE789925A8E65000E29BF4 = {
 			isa = PBXGroup;
 			children = (
@@ -122,9 +130,9 @@
 		17FE78A525A8E65000E29BF4 /* UIView-Shimmer */ = {
 			isa = PBXGroup;
 			children = (
+				17A5980725AB1A8500CEC83B /* Resources */,
 				17FE78F325A8F42400E29BF4 /* UIView+Extensions */,
 				17FE78A625A8E65000E29BF4 /* UIView_Shimmer.h */,
-				17FE78A725A8E65000E29BF4 /* Info.plist */,
 				17FE78EE25A8F42000E29BF4 /* Constants.swift */,
 			);
 			path = "UIView-Shimmer";
@@ -494,7 +502,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Sources/UIView-Shimmer/Info.plist";
+				INFOPLIST_FILE = "Sources/UIView-Shimmer/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -522,7 +530,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Sources/UIView-Shimmer/Info.plist";
+				INFOPLIST_FILE = "Sources/UIView-Shimmer/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
