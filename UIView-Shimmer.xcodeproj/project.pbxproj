@@ -83,11 +83,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17FE789925A8E65000E29BF4 = {
+		17A597D925AB0D1500CEC83B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				17FE78A525A8E65000E29BF4 /* UIView-Shimmer */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		17A597EC25AB0DB200CEC83B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
 				17FE78B025A8E65100E29BF4 /* UIView-ShimmerTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		17FE789925A8E65000E29BF4 = {
+			isa = PBXGroup;
+			children = (
+				17A597D925AB0D1500CEC83B /* Sources */,
+				17A597EC25AB0DB200CEC83B /* Tests */,
 				17FE78C625A8E73E00E29BF4 /* ShimmerExamples */,
 				17FE78A425A8E65000E29BF4 /* Products */,
 			);
@@ -478,7 +494,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "UIView-Shimmer/Info.plist";
+				INFOPLIST_FILE = "Sources/UIView-Shimmer/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,7 +522,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "UIView-Shimmer/Info.plist";
+				INFOPLIST_FILE = "Sources/UIView-Shimmer/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -529,7 +545,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PU6D47W39;
-				INFOPLIST_FILE = "UIView-ShimmerTests/Info.plist";
+				INFOPLIST_FILE = "Tests/UIView-ShimmerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,7 +564,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PU6D47W39;
-				INFOPLIST_FILE = "UIView-ShimmerTests/Info.plist";
+				INFOPLIST_FILE = "Tests/UIView-ShimmerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
