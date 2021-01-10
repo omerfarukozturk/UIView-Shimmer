@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master)](https://travis-ci.com/omerfarukozturk/UIView-Shimmer)
 ![Platform: iOS](https://img.shields.io/badge/platform-ios-blue)
 ![License](https://img.shields.io/github/license/omerfarukozturk/UIView-Shimmer)
-![CocaPods Compatible](https://img.shields.io/badge/pod-v1.0-green)
+![CocaPods Compatible](https://img.shields.io/badge/pod-v1.0.1-blue)
+![Swift Package Manager Compatible](https://img.shields.io/badge/spm-v1.0.1-blue)
 
 > Simple way to apply shimmering effect to any UIView.
 
