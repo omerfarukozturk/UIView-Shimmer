@@ -68,10 +68,18 @@ extension UITextView: ShimmeringViewProtocol { }
 ... 
 ```
 
-Then call `setShimmeringAnimationWithSubviews(template:superviewBackgroundColor:)` extension of `UIView` for any view (basically a superview). This function finds all descendand subviews to be set as template and applies animation.
+Then call `setShimmeringAnimationWithSubviews(template:superviewBackgroundColor:)` extension of `UIView` for any view (basically a superview). This function finds all descendand subviews to be set as template and applies animation. Before the call, make sure the view is loaded.
+
+For UITableViewCell, to mark as template, view you call on `willDisplay` delegate.
 
 ```swift
-view.setShimmeringAnimationWithSubviews(template: true, superviewBackgroundColor: .systemBackground)
+cell.setShimmeringAnimationWithSubviews(template: true, superviewBackgroundColor: .systemBackground)
+```
+
+You can hide, for example after a completion of a task, with `template = false` parameter. It is not needed to give `superviewBackgroundColor` value when hiding template (with shimmering) animation.
+
+```swift
+cell.setShimmeringAnimationWithSubviews(template: false)
 ```
 
 Light Theme                | Dark Theme
