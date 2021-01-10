@@ -14,15 +14,6 @@
 
 ## Installation
 
-### Manuel
-If you do not want to add extra dependency, just copy related extensions to your project.
-
-```
-UIView+Extensions.swift
-UIView+Template.swift
-UIView+Shimmer.swift
-```
-
 ### CocoaPods
 `UIView-Shimmer` is available through [CocoaPods](https://cocoapods.org/pods/UIView-Shimmer). To install it, simply add the following line to your Podfile:
 
@@ -32,6 +23,26 @@ pod 'UIView-Shimmer', '~> 1.0'
 Then import
 ```swift
 import UIView_Shimmer
+```
+
+### Swift Package Manager
+`UIView-Shimmer` is available through [Swift Package Manager](https://swift.org/package-manager/). 
+
+To add package go to `File -> Swift Packages -> Add Package Dependancy `
+
+```ruby
+name: "UIView-Shimmer"
+url: https://github.com/omerfarukozturk/UIView-Shimmer.git
+version: 1.0.1
+```
+
+### Manuel
+If you do not want to add extra dependency, just copy related extensions to your project.
+
+```
+UIView+Extensions.swift
+UIView+Template.swift
+UIView+Shimmer.swift
 ```
 
 ## Usage 
