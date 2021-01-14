@@ -24,20 +24,14 @@ extension UIView {
         
         let baseShimmeringColor: UIColor? = superviewBackgroundColor ?? superview?.backgroundColor
         guard let color = baseShimmeringColor else {
-            print("`baseColor` can not be nil while calling `setShimmeringAnimation`")
+            print("`superviewBackgroundColor` can not be nil while calling `setShimmeringAnimation`")
             return
         }
         
+        // MARK: - Shimmering Layer
         let gradientLayer = CAGradientLayer()
         gradientLayer.name = Key.shimmer
-        var frame: CGRect!
-        if self is UILabel {
-            let width: CGFloat = max(intrinsicContentSize.width, sizeThatFits(bounds.size).width)
-            frame = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: width, height: bounds.height)
-        } else {
-           frame = bounds
-        }
-        gradientLayer.frame = frame
+        gradientLayer.frame = getFrame()
         gradientLayer.cornerRadius = min(bounds.height / 2, 5)
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
@@ -48,7 +42,7 @@ extension UIView {
         layer.addSublayer(gradientLayer)
         gradientLayer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
         
-        // shimmer animation
+        // MARK: - Shimmer Animation
         let animation = CABasicAnimation(keyPath: "locations")
         animation.fromValue = [-1.0, -0.5, 0.0]
         animation.toValue = [1.0, 1.5, 2.0]

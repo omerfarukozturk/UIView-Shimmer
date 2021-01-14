@@ -32,35 +32,20 @@ extension UIView {
         
         let templateLayer = CALayer()
         templateLayer.name = Key.template
-        var templateFrame: CGRect!
         
         setNeedsLayout()
         layoutIfNeeded()
         
-        if let label = self as? UILabel {
-            let width: CGFloat = intrinsicContentSize.width
-            var horizontalX: CGFloat!
-            switch label.textAlignment {
-            case .center:
-                horizontalX = bounds.midX - width / 2
-            case .right:
-                horizontalX = bounds.width - width
-            default:
-                horizontalX = 0
-            }
-            
-            templateFrame = CGRect(x: horizontalX, y: 0, width: width, height: bounds.height)
-        } else {
-            templateFrame = bounds
-        }
-        
+        let templateFrame = getFrame()
         let cornerRadius: CGFloat = max(layer.cornerRadius, min(bounds.height/2,5))
         
+        // MARK: - Mask Layer
         let maskLayer = CAShapeLayer()
         let ovalPath = UIBezierPath(roundedRect: templateFrame, cornerRadius: cornerRadius)
         maskLayer.path = ovalPath.cgPath
         layer.mask = maskLayer
         
+        // MARK: Template Layer
         templateLayer.frame = templateFrame
         templateLayer.cornerRadius = cornerRadius
         templateLayer.backgroundColor = color.cgColor

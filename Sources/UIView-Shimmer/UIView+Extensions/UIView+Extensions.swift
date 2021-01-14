@@ -36,4 +36,23 @@ extension UIView {
             $0.setShimmeringAnimation(template, superviewBackgroundColor: superviewBackgroundColor)
         }
     }
+    
+    func getFrame() -> CGRect {
+        if let label = self as? UILabel {
+            let width: CGFloat = intrinsicContentSize.width
+            var horizontalX: CGFloat!
+            switch label.textAlignment {
+            case .center:
+                horizontalX = bounds.midX - width / 2
+            case .right:
+                horizontalX = bounds.width - width
+            default:
+                horizontalX = 0
+            }
+            
+            return CGRect(x: horizontalX, y: 0, width: width, height: bounds.height)
+        } else {
+            return bounds
+        }
+    }
 }
