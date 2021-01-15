@@ -11,18 +11,18 @@ extension UIView {
     
     /// Set shimmering animation for view..
     /// - Parameters:
-    ///     - animated: Specifies the animation is on/off.
-    ///     - superviewBackgroundColor: The `backgroudColor` of specified views superview.
-    public func setShimmeringAnimation(_ animated: Bool, superviewBackgroundColor: UIColor? = nil) {
+    ///     - animate: Specifies the animation is on/off.
+    ///     - viewBackgroundColor: The `backgroudColor` of specified views superview.
+    func setShimmeringAnimation(_ animate: Bool, viewBackgroundColor: UIColor? = nil) {
         let currentShimmerLayer = layer.sublayers?.first(where: { $0.name == Key.shimmer })
-        if animated {
+        if animate {
             if currentShimmerLayer != nil { return }
         } else {
             currentShimmerLayer?.removeFromSuperlayer()
             return
         }
         
-        let baseShimmeringColor: UIColor? = superviewBackgroundColor ?? superview?.backgroundColor
+        let baseShimmeringColor: UIColor? = viewBackgroundColor ?? superview?.backgroundColor
         guard let color = baseShimmeringColor else {
             print("`superviewBackgroundColor` can not be nil while calling `setShimmeringAnimation`")
             return

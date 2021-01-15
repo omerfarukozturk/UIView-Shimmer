@@ -5,4 +5,12 @@
 //  Created by Ömer Faruk Öztürk on 15.01.2021.
 //
 
-import Foundation
+import UIKit
+
+public protocol ShimmeringViewProtocol where Self: UIView {
+    var shimmeringAnimatedItems: [UIView] { get }
+}
+
+extension ShimmeringViewProtocol {
+    public var shimmeringAnimatedItems: [UIView] { [self] }
+}

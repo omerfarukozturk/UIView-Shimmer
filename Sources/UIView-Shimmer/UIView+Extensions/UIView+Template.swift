@@ -9,7 +9,11 @@ import UIKit
 
 extension UIView {
     
-    public func setTemplate(_ isTemplate: Bool, baseColor: UIColor? = nil) {
+    /// Sets the view as template.
+    /// - Parameters:
+    ///   - template: Set `true` to make it template. `false` to remove.
+    ///   - baseColor: Template layer color. 
+    func setTemplate(_ template: Bool, baseColor: UIColor? = nil) {
         var color: UIColor
         if let baseColor = baseColor {
             color = baseColor
@@ -22,7 +26,7 @@ extension UIView {
         }
         let currentTemplateLayer = layer.sublayers?.first(where: { $0.name == Key.template })
         
-        if isTemplate {
+        if template {
             if currentTemplateLayer != nil { return }
         } else {
             currentTemplateLayer?.removeFromSuperlayer()

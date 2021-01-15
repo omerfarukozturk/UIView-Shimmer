@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1753D5A825A987D000AEE1EA /* SampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753D5A725A987D000AEE1EA /* SampleDetailViewController.swift */; };
 		1753D5B925A9DDCB00AEE1EA /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753D5B825A9DDCB00AEE1EA /* SampleTableViewCell.swift */; };
+		17C09BF625B167BE00330061 /* ShimmeringViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C09BF525B167BE00330061 /* ShimmeringViewProtocol.swift */; };
 		17FE78AD25A8E65100E29BF4 /* UIView_Shimmer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FE78A325A8E65000E29BF4 /* UIView_Shimmer.framework */; };
 		17FE78B225A8E65100E29BF4 /* UIView_ShimmerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE78B125A8E65100E29BF4 /* UIView_ShimmerTests.swift */; };
 		17FE78B425A8E65100E29BF4 /* UIView_Shimmer.h in Headers */ = {isa = PBXBuildFile; fileRef = 17FE78A625A8E65000E29BF4 /* UIView_Shimmer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		1753D5A725A987D000AEE1EA /* SampleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDetailViewController.swift; sourceTree = "<group>"; };
 		1753D5B825A9DDCB00AEE1EA /* SampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
+		17C09BF525B167BE00330061 /* ShimmeringViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringViewProtocol.swift; sourceTree = "<group>"; };
 		17FE78A325A8E65000E29BF4 /* UIView_Shimmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIView_Shimmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FE78A625A8E65000E29BF4 /* UIView_Shimmer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIView_Shimmer.h; sourceTree = "<group>"; };
 		17FE78A725A8E65000E29BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +109,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		17C09BFA25B167D900330061 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17FE78EE25A8F42000E29BF4 /* Constants.swift */,
+				17C09BF525B167BE00330061 /* ShimmeringViewProtocol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		17FE789925A8E65000E29BF4 = {
 			isa = PBXGroup;
 			children = (
@@ -130,10 +141,10 @@
 		17FE78A525A8E65000E29BF4 /* UIView-Shimmer */ = {
 			isa = PBXGroup;
 			children = (
+				17C09BFA25B167D900330061 /* Models */,
 				17A5980725AB1A8500CEC83B /* Resources */,
 				17FE78F325A8F42400E29BF4 /* UIView+Extensions */,
 				17FE78A625A8E65000E29BF4 /* UIView_Shimmer.h */,
-				17FE78EE25A8F42000E29BF4 /* Constants.swift */,
 			);
 			path = "UIView-Shimmer";
 			sourceTree = "<group>";
@@ -316,6 +327,7 @@
 				17FE78E225A8ED5A00E29BF4 /* UIView+Template.swift in Sources */,
 				17FE78DD25A8ECA800E29BF4 /* UIView+Extensions.swift in Sources */,
 				17FE78EA25A8ED8D00E29BF4 /* UIView+Shimmer.swift in Sources */,
+				17C09BF625B167BE00330061 /* ShimmeringViewProtocol.swift in Sources */,
 				17FE78EF25A8F42000E29BF4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

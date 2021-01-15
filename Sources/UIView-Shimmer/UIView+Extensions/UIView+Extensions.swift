@@ -7,14 +7,6 @@
 
 import UIKit
 
-public protocol ShimmeringViewProtocol where Self: UIView {
-    var shimmeringAnimatedItems: [UIView] { get }
-}
-
-extension ShimmeringViewProtocol {
-    public var shimmeringAnimatedItems: [UIView] { [self] }
-}
-
 extension UIView {
     
     var allTemplateViews: [UIView] {
@@ -28,13 +20,6 @@ extension UIView {
             views.append(contentsOf: view.shimmeringAnimatedItems)
         }
         subviews.forEach { $0.getSubShimmerViews(&views) }
-    }
-    
-    public func setShimmeringAnimationWithSubviews(template: Bool, superviewBackgroundColor: UIColor? = nil) {
-        allTemplateViews.forEach {
-            $0.setTemplate(template)
-            $0.setShimmeringAnimation(template, superviewBackgroundColor: superviewBackgroundColor)
-        }
     }
     
     func getFrame() -> CGRect {
@@ -53,6 +38,30 @@ extension UIView {
             return CGRect(x: horizontalX, y: 0, width: width, height: bounds.height)
         } else {
             return bounds
+        }
+    }
+}
+
+// MARK: Public Extensions
+
+extension UIView {
+    
+    
+    /// Sets the view as template with shimmering animation.
+    /// - Parameters:
+    ///   - template: Boolean value determines seting the view template or not.
+    ///   - color: Optional template effect color.
+    ///   - animate: Apply shimmering effect or not. Default value is `true`
+    ///   - viewBackgroundColor: Color for shimmering animation to adapt superview. If not specified, `superview?.backgroundColor` is used.
+    public func setTemplateWithSubviews(_ template: Bool,
+                                        color: UIColor? = nil,
+                                        animate: Bool = true,
+                                        viewBackgroundColor: UIColor? = nil) {
+        allTemplateViews.forEach {
+            $0.setTemplate(template, baseColor: color)
+            if animate {
+                $0.setShimmeringAnimation(template, viewBackgroundColor: viewBackgroundColor)
+            }
         }
     }
 }
