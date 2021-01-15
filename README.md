@@ -49,6 +49,8 @@ UIView+Shimmer.swift
 
 ## Usage 
 
+### Shimmering Animation
+
 Conform any view to `ShimmeringViewProtocol` which identifies that shimmering animation will be applied to it or specified subviews. Define which subviews are animated in `shimmeringAnimatedItems`.
 
 ```swift
@@ -86,18 +88,31 @@ Then call `setShimmeringAnimationWithSubviews(template:superviewBackgroundColor:
 For UITableViewCell, to mark as template, view you call on `willDisplay` delegate.
 
 ```swift
-cell.setShimmeringAnimationWithSubviews(template: true, superviewBackgroundColor: .systemBackground)
+cell.setTemplateWithSubviews(isLoading, viewBackgroundColor: .systemBackground)
 ```
 
 You can hide, for example after a completion of a task, with `template = false` parameter. It is not needed to give `superviewBackgroundColor` value when hiding template (with shimmering) animation.
 
 ```swift
-cell.setShimmeringAnimationWithSubviews(template: false)
+cell.setTemplateWithSubviews(template: false)
 ```
 
 Light Theme                | Dark Theme
 :-------------------------:|:-------------------------:
 ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animation_light.gif)  |  ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animation_dark.gif)
+
+
+#### Placeholder
+
+You can only set template view without shimmering animation via setting `animation: false`. (like `.redacted(reason:  .placeholder)` in SwiftUI)
+
+```swift
+view.setTemplateWithSubviews(true, animate: false)
+```
+
+Default                | Template
+:-------------------------:|:-------------------------:
+![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_default.png)  |  ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_on.png)
 
 
 ## Example 
