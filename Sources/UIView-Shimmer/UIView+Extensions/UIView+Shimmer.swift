@@ -24,7 +24,7 @@ extension UIView {
         
         let baseShimmeringColor: UIColor? = viewBackgroundColor ?? superview?.backgroundColor
         guard let color = baseShimmeringColor else {
-            print("`superviewBackgroundColor` can not be nil while calling `setShimmeringAnimation`")
+            print("`viewBackgroundColor` can not be nil while calling `setShimmeringAnimation`")
             return
         }
         
