@@ -25,13 +25,13 @@ final class SampleDetailViewController: UIViewController {
         prepareUI()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.view.setShimmeringAnimationWithSubviews(template: false)
+            self.view.setTemplateWithSubviews(false)
         }
     }
        
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        view.setShimmeringAnimationWithSubviews(template: true, superviewBackgroundColor: .systemBackground)
+        view.setTemplateWithSubviews(true, animate: false)
     }
     
     private let sampleLabel: UILabel = {

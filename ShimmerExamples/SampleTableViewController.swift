@@ -53,9 +53,9 @@ final class SampleTableViewController: UITableViewController {
          So you can set background color to parent:
          cell.contentView.backgroundColor = .white
          
-         or specify it with `color` parameter.
+         or specify it with `viewBackgroundColor` parameter.
          */
-        cell.setShimmeringAnimationWithSubviews(template: isLoading, superviewBackgroundColor: .systemBackground)
+        cell.setTemplateWithSubviews(isLoading, animate: true, viewBackgroundColor: .systemBackground)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
