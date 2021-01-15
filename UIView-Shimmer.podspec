@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "UIView-Shimmer"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "UIView extension to apply shimmering effect to any view."
 
   spec.description  = <<-DESC
