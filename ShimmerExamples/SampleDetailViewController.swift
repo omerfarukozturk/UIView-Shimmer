@@ -31,7 +31,7 @@ final class SampleDetailViewController: UIViewController {
        
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        view.setTemplateWithSubviews(true, animate: false)
+        view.setTemplateWithSubviews(true, viewBackgroundColor: .systemBackground)
     }
     
     private let sampleLabel: UILabel = {
