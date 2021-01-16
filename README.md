@@ -2,7 +2,7 @@
 <h1 align="center">UIView-Shimmer</h1>
 
 <h4 align="center">Super easy way to apply shimmering effect to any view and its subviews for iOS applications.</h4>
-
+<br>
 <p align="center">
     <a href="https://travis-ci.com/omerfarukozturk/UIView-Shimmer"><img src="https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master"/></a>
     <img src="https://img.shields.io/badge/platform-ios-blue" alt="Platform: iOS"/>
@@ -122,6 +122,9 @@ view.setTemplateWithSubviews(true, animate: false)
 Default                | Template
 :-------------------------:|:-------------------------:
 ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_default.png)  |  ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_on.png)
+
+### Note
+Template view (and also Shimmering effect) frames are calculated based on their `intrinsicContentSize` or their layout constraints. So should set dummy values for `UILabels`, `UITextView` etc. or set their constraints to visually draw their templates.
 
 
 ## Example 
