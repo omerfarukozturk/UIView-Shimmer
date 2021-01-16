@@ -1,13 +1,22 @@
-# UIView-Shimmer
 
-[![Build Status](https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master)](https://travis-ci.com/omerfarukozturk/UIView-Shimmer)
-![Platform: iOS](https://img.shields.io/badge/platform-ios-blue)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
-![CocaPods Compatible](https://img.shields.io/badge/pod-v1.0.2-blue)
-![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen)
-![Swift Package Manager Compatible](https://img.shields.io/badge/spm-compatible-brightgreen)
+<h1 align="center">UIView-Shimmer</h1>
 
-> Simple way to apply shimmering effect to any UIView.
+<p align="center">Simple way to apply shimmering effect to any UIView.</p>
+
+<p align="center">
+    <a href="https://travis-ci.com/omerfarukozturk/UIView-Shimmer"><img src="https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master"/></a>
+    <img src="https://img.shields.io/badge/platform-ios-blue" alt="Platform: iOS"/>
+    <img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License"/>
+    <img src="https://img.shields.io/badge/pod-v1.0.2-blue" alt="CocaPods Compatible"/>
+    <img src="https://img.shields.io/badge/Carthage-compatible-brightgreen" alt="Carthage Compatible"/>
+    <img src="https://img.shields.io/badge/SPM-compatible-brightgreen" alt="CaSwift Package Manager Compatible"/>
+</p>
+
+<p align="center">
+    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_default.png"/>
+    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animated.gif"/>
+</p>
+
 
 ## Requirements
 
@@ -35,7 +44,7 @@ To add package go to `File -> Swift Packages -> Add Package Dependancy `
 ```ruby
 name: "UIView-Shimmer"
 url: https://github.com/omerfarukozturk/UIView-Shimmer.git
-version: 1.0.1
+version: 1.0.2
 ```
 
 ### Manuel
