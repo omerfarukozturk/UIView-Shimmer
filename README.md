@@ -1,7 +1,7 @@
 
 <h1 align="center">UIView-Shimmer</h1>
 
-<p align="center">Simple way to apply shimmering effect to any UIView.</p>
+<h4 align="center">Super easy way to apply shimmering effect to any view and its subviews for iOS applications.</h4>
 
 <p align="center">
     <a href="https://travis-ci.com/omerfarukozturk/UIView-Shimmer"><img src="https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master"/></a>
@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/SPM-compatible-brightgreen" alt="CaSwift Package Manager Compatible"/>
 </p>
 
-<p align="center">
+<p align="center" vertical-align="center">
     <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_default.png"/>
     <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animated.gif"/>
 </p>
