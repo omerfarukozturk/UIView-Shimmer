@@ -37,7 +37,7 @@ extension UIView {
                 horizontalX = 0
             }
             
-            return CGRect(x: horizontalX, y: 0, width: width, height: bounds.height)
+            return CGRect(x: horizontalX, y: 0, width: width, height: intrinsicContentSize.height)
         }
         
         return bounds
