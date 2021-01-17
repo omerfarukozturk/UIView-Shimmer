@@ -15,11 +15,13 @@ extension UIView {
         return views
     }
     
-    private func getSubShimmerViews(_ views: inout [UIView]) {
+    private func getSubShimmerViews(_ views: inout [UIView], excludedViews: Set<UIView> = []) {
+        var excludedViews = excludedViews
         if let view = self as? ShimmeringViewProtocol {
-            views.append(contentsOf: view.shimmeringAnimatedItems)
+            excludedViews = excludedViews.union(view.excludedItems)
+            views.append(contentsOf: view.shimmeringAnimatedItems.filter({ !excludedViews.contains($0) }))
         }
-        subviews.forEach { $0.getSubShimmerViews(&views) }
+        subviews.forEach { $0.getSubShimmerViews(&views, excludedViews: excludedViews) }
     }
     
     func getFrame() -> CGRect {
@@ -36,9 +38,9 @@ extension UIView {
             }
             
             return CGRect(x: horizontalX, y: 0, width: width, height: bounds.height)
-        } else {
-            return bounds
         }
+        
+        return bounds
     }
 }
 
