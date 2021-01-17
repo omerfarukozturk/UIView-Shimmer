@@ -110,6 +110,19 @@ Light Theme                | Dark Theme
 :-------------------------:|:-------------------------:
 ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animation_light.gif)  |  ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animation_dark.gif)
 
+#### Excluded Views
+
+You can set `excludedItems` with `ShimmeringViewProtocol` to set views will be excluded while setting animation.
+
+```swift
+var excludedItems: Set<UIView> {
+    [nameLabel]
+}
+```
+    
+![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_excluded.png)
+
+<p></p>
 
 #### Placeholder
 
@@ -124,7 +137,7 @@ Default                | Template
 ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_default.png)  |  ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_on.png)
 
 ### Note
-Template view (and also Shimmering effect) frames are calculated based on their `intrinsicContentSize` or their layout constraints. So should set dummy values for `UILabels`, `UITextView` etc. or set their constraints to visually draw their templates.
+Template view (and also Shimmering effect) frames are calculated based on their `intrinsicContentSize` or their layout constraints. So you should set dummy values for `UILabels`, `UITextView` etc. or set their constraints to visually draw their templates.
 
 
 ## Example 
