@@ -120,7 +120,10 @@ var excludedItems: Set<UIView> {
 }
 ```
     
-![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_excluded.png)
+<table><tr><td>
+    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_excluded.png" />
+</td></tr></table>
+
 
 <p></p>
 
