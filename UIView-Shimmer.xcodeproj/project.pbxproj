@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1753D5A825A987D000AEE1EA /* SampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753D5A725A987D000AEE1EA /* SampleDetailViewController.swift */; };
 		1753D5B925A9DDCB00AEE1EA /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753D5B825A9DDCB00AEE1EA /* SampleTableViewCell.swift */; };
+		177FC7C625B37DB800A3D19D /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177FC7C525B37DB800A3D19D /* UIViewExtensionsTests.swift */; };
 		17C09BF625B167BE00330061 /* ShimmeringViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C09BF525B167BE00330061 /* ShimmeringViewProtocol.swift */; };
 		17FE78AD25A8E65100E29BF4 /* UIView_Shimmer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FE78A325A8E65000E29BF4 /* UIView_Shimmer.framework */; };
 		17FE78B225A8E65100E29BF4 /* UIView_ShimmerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE78B125A8E65100E29BF4 /* UIView_ShimmerTests.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		1753D5A725A987D000AEE1EA /* SampleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDetailViewController.swift; sourceTree = "<group>"; };
 		1753D5B825A9DDCB00AEE1EA /* SampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
+		177FC7C525B37DB800A3D19D /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		17C09BF525B167BE00330061 /* ShimmeringViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringViewProtocol.swift; sourceTree = "<group>"; };
 		17FE78A325A8E65000E29BF4 /* UIView_Shimmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIView_Shimmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FE78A625A8E65000E29BF4 /* UIView_Shimmer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIView_Shimmer.h; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		17FE78B025A8E65100E29BF4 /* UIView-ShimmerTests */ = {
 			isa = PBXGroup;
 			children = (
+				177FC7C525B37DB800A3D19D /* UIViewExtensionsTests.swift */,
 				17FE78B125A8E65100E29BF4 /* UIView_ShimmerTests.swift */,
 				17FE78B325A8E65100E29BF4 /* Info.plist */,
 			);
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177FC7C625B37DB800A3D19D /* UIViewExtensionsTests.swift in Sources */,
 				17FE78B225A8E65100E29BF4 /* UIView_ShimmerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

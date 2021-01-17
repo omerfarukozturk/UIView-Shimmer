@@ -8,28 +8,11 @@
 import XCTest
 @testable import UIView_Shimmer
 
+extension UIButton: ShimmeringViewProtocol { }
+extension UILabel: ShimmeringViewProtocol { }
+
 final class UIView_ShimmerTests: XCTestCase {
 
-    func testAllTemplateViewsReturnRelatedViewsInView() {
-        // Given
-        let mainView = UIView()
-        let view1 = ACustomView()
-        mainView.addSubview(view1)
-        let view2 = ACustomView()
-        mainView.addSubview(view2)
-        
-        let aButton = UIButton()
-        let aLabel = UILabel()
-        let stackView = UIStackView(arrangedSubviews: [aButton, aLabel])
-        mainView.addSubview(stackView)
-        
-        // When
-        let expectedViews = mainView.allTemplateViews
-        
-        // Then
-        XCTAssertEqual([view1, view2, aButton, aLabel], expectedViews)
-    }
-    
     func testSetShimmeringAnimationWithSubviewsAddsAndRemovesSubLayers() {
         // Given
         let aButton = UIButton()
@@ -54,10 +37,69 @@ final class UIView_ShimmerTests: XCTestCase {
         XCTAssertNil(aLabel.layer.sublayers?.first(where: { $0.name == Key.template }))
         XCTAssertNil(aLabel.layer.sublayers?.first(where: { $0.name == Key.shimmer }))
     }
+    
+    func testSetTemplageWithSubviewsAddPlaceholderButShimmer() {
+        // Given
+        let aButton = UIButton()
+        let aLabel = UILabel()
+        let stackView = UIStackView(arrangedSubviews: [aButton, aLabel])
+        
+        // When
+        stackView.setTemplateWithSubviews(true)
+        
+        // Then
+        XCTAssertNotNil(aButton.layer.sublayers?.first(where: { $0.name == Key.template }))
+        XCTAssertNil(aButton.layer.sublayers?.first(where: { $0.name == Key.shimmer }))
+        XCTAssertNotNil(aLabel.layer.sublayers?.first(where: { $0.name == Key.template }))
+        XCTAssertNil(aLabel.layer.sublayers?.first(where: { $0.name == Key.shimmer }))
+    }
+    
+    func testSetTemplateWithCustomColor() {
+        // Given
+        let aLabel = UILabel()
+        
+        // When
+        aLabel.setTemplate(true, baseColor: .red)
+        
+        // Then
+        let templateLayer = aLabel.layer.sublayers?.first(where: { $0.name == Key.template })
+        XCTAssertEqual(templateLayer?.backgroundColor, UIColor.red.cgColor)
+    }
+    
+    
+    @available (iOS 13.0, *)
+    func testSetTemplateWithoutCustomColorSetsLightColor() {
+        // Given
+        let aLabel = ACustomLabel(style: .light)
+        
+        // When
+        aLabel.setTemplate(true)
+        
+        // Then
+        let templateLayer = aLabel.layer.sublayers?.first(where: { $0.name == Key.template })
+        XCTAssertEqual(templateLayer?.backgroundColor, Color.Placeholder.light.cgColor)
+    }
+    
+    @available (iOS 13.0, *)
+    func testSetTemplateWithoutCustomColorSetsDarkColor() {
+        // Given
+        let aLabel = ACustomLabel(style: .dark)
+        
+        // When
+        aLabel.setTemplate(true)
+        
+        // Then
+        let templateLayer = aLabel.layer.sublayers?.first(where: { $0.name == Key.template })
+        XCTAssertEqual(templateLayer?.backgroundColor, Color.Placeholder.dark.cgColor)
+    }
 }
 
-fileprivate final class ACustomView: UIView, ShimmeringViewProtocol { }
-
-extension UIButton: ShimmeringViewProtocol { }
-
-extension UILabel: ShimmeringViewProtocol { }
+@available(iOS 13.0, *)
+fileprivate final class ACustomLabel: UILabel {
+    fileprivate var userInterfaceStyle: UIUserInterfaceStyle!
+    
+    convenience init(style: UIUserInterfaceStyle) {
+        self.init()
+        overrideUserInterfaceStyle = style
+    }
+}
