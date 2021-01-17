@@ -25,4 +25,11 @@ final class SampleTableViewCell: UITableViewCell, ShimmeringViewProtocol {
             secondActionButton
         ]
     }
+    
+    // You can define excluded views not to be animated.
+    /*
+    var excludedItems: Set<UIView> {
+        [nameLabel]
+    }
+     */
 }
