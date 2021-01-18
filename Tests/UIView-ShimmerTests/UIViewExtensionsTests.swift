@@ -102,7 +102,7 @@ fileprivate final class ACustomLabel: UILabel {
 
     convenience init(contentSize: CGSize) {
         self.init()
-        self.contentSize = intrinsicContentSize
+        self.contentSize = contentSize
     }
 
     override var intrinsicContentSize: CGSize { contentSize }
