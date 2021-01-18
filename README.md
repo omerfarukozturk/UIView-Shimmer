@@ -22,6 +22,8 @@
 
 ## Requirements
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/78bb9bbccc444cdc93144a48795ea004)](https://app.codacy.com/gh/omerfarukozturk/UIView-Shimmer?utm_source=github.com&utm_medium=referral&utm_content=omerfarukozturk/UIView-Shimmer&utm_campaign=Badge_Grade)
+
 * iOS 10+
 
 
