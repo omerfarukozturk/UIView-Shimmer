@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+xcodeproj: UIView-Shimmer.xcodeproj
+scheme: UIView-Shimmer
+output_directory: reports
+ignore:
+  - ShimmerExamples/*
