@@ -5,6 +5,7 @@
 <br>
 <p align="center">
     <a href="https://travis-ci.com/omerfarukozturk/UIView-Shimmer"><img src="https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master"/></a>
+    <a href="https://www.codacy.com/gh/omerfarukozturk/UIView-Shimmer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omerfarukozturk/UIView-Shimmer&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/83ee6e94d8774d029e297503016c9b16"/></a>
     <img src="https://github.com/omerfarukozturk/UIView-Shimmer/workflows/Swift%20CI/badge.svg"/>
     <img src="https://img.shields.io/badge/platform-ios-blue" alt="Platform: iOS"/>
     <img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License"/>
