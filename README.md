@@ -5,6 +5,7 @@
 <br>
 <p align="center">
     <a href="https://travis-ci.com/omerfarukozturk/UIView-Shimmer"><img src="https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master"/></a>
+    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/workflows/Swift%20CI/badge.svg"/>
     <img src="https://img.shields.io/badge/platform-ios-blue" alt="Platform: iOS"/>
     <img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License"/>
     <img src="https://img.shields.io/badge/pod-v1.0.2-blue" alt="CocaPods Compatible"/>
@@ -120,7 +121,10 @@ var excludedItems: Set<UIView> {
 }
 ```
     
-![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_excluded.png)
+<table><tr><td>
+    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_excluded.png" />
+</td></tr></table>
+
 
 <p></p>
 
@@ -142,6 +146,9 @@ Template view (and also Shimmering effect) frames are calculated based on their 
 
 ## Example 
 The exmple project demonstrates how to use it. Pull the repo and check [ShimmerExamples](/ShimmerExamples).
+
+## Contributing
+Contributions are welcome 🙌
 
 ## License
 UIView-Shimmer is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
