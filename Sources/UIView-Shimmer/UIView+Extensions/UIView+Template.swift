@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    
+
     /// Sets the view as template.
     /// - Parameters:
     ///   - template: Set `true` to make it template. `false` to remove.
@@ -25,7 +25,7 @@ extension UIView {
             }
         }
         let currentTemplateLayer = layer.sublayers?.first(where: { $0.name == Key.template })
-        
+
         if template {
             if currentTemplateLayer != nil { return }
         } else {
@@ -33,22 +33,22 @@ extension UIView {
             layer.mask = nil
             return
         }
-        
+
         let templateLayer = CALayer()
         templateLayer.name = Key.template
-        
+
         setNeedsLayout()
         layoutIfNeeded()
-        
+
         let templateFrame = getFrame()
-        let cornerRadius: CGFloat = max(layer.cornerRadius, min(bounds.height/2,5))
-        
+        let cornerRadius: CGFloat = max(layer.cornerRadius, min(bounds.height/2, 5))
+
         // MARK: - Mask Layer
         let maskLayer = CAShapeLayer()
         let ovalPath = UIBezierPath(roundedRect: templateFrame, cornerRadius: cornerRadius)
         maskLayer.path = ovalPath.cgPath
         layer.mask = maskLayer
-        
+
         // MARK: Template Layer
         templateLayer.frame = templateFrame
         templateLayer.cornerRadius = cornerRadius
@@ -56,5 +56,4 @@ extension UIView {
         layer.addSublayer(templateLayer)
         templateLayer.zPosition = CGFloat(Float.greatestFiniteMagnitude - 1.0)
     }
-    
 }

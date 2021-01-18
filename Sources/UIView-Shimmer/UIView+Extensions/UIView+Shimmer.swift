@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    
+
     /// Set shimmering animation for view..
     /// - Parameters:
     ///     - animate: Specifies the animation is on/off.
@@ -21,13 +21,13 @@ extension UIView {
             currentShimmerLayer?.removeFromSuperlayer()
             return
         }
-        
+
         let baseShimmeringColor: UIColor? = viewBackgroundColor ?? superview?.backgroundColor
         guard let color = baseShimmeringColor else {
             print("⚠️ Warning: `viewBackgroundColor` can not be nil while calling `setShimmeringAnimation`")
             return
         }
-        
+
         // MARK: - Shimmering Layer
         let gradientLayer = CAGradientLayer()
         gradientLayer.name = Key.shimmer
@@ -41,7 +41,7 @@ extension UIView {
         gradientLayer.locations = [0.0, 0.5, 1.0]
         layer.addSublayer(gradientLayer)
         gradientLayer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
-        
+
         // MARK: - Shimmer Animation
         let animation = CABasicAnimation(keyPath: "locations")
         animation.fromValue = [-1.0, -0.5, 0.0]

@@ -8,13 +8,13 @@
 import UIKit
 
 extension UIView {
-    
+
     var allTemplateViews: [UIView] {
         var views = [UIView]()
         getSubShimmerViews(&views)
         return views
     }
-    
+
     private func getSubShimmerViews(_ views: inout [UIView], excludedViews: Set<UIView> = []) {
         var excludedViews = excludedViews
         if let view = self as? ShimmeringViewProtocol {
@@ -23,7 +23,7 @@ extension UIView {
         }
         subviews.forEach { $0.getSubShimmerViews(&views, excludedViews: excludedViews) }
     }
-    
+
     func getFrame() -> CGRect {
         if let label = self as? UILabel {
             let width: CGFloat = intrinsicContentSize.width
@@ -36,10 +36,10 @@ extension UIView {
             default:
                 horizontalX = 0
             }
-            
+
             return CGRect(x: horizontalX, y: 0, width: width, height: intrinsicContentSize.height)
         }
-        
+
         return bounds
     }
 }
@@ -47,14 +47,14 @@ extension UIView {
 // MARK: Public Extensions
 
 extension UIView {
-    
-    
+
     /// Sets the view as template with shimmering animation.
     /// - Parameters:
     ///   - template: Boolean value determines seting the view template or not.
     ///   - color: Optional template effect color.
     ///   - animate: Apply shimmering effect or not. Default value is `true`
-    ///   - viewBackgroundColor: Color for shimmering animation to adapt superview. If not specified, `superview?.backgroundColor` is used.
+    ///   - viewBackgroundColor: Color for shimmering animation to adapt superview.
+    ///   If not specified, `superview?.backgroundColor` is used.
     public func setTemplateWithSubviews(_ template: Bool,
                                         color: UIColor? = nil,
                                         animate: Bool = true,
