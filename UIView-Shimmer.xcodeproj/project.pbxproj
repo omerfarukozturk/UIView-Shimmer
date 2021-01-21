@@ -120,6 +120,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		17F758F325B9FD0100EAB0EC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				17FE78F325A8F42400E29BF4 /* UIView+Extensions */,
+				17C09BFA25B167D900330061 /* Models */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		17FE789925A8E65000E29BF4 = {
 			isa = PBXGroup;
 			children = (
@@ -143,9 +152,8 @@
 		17FE78A525A8E65000E29BF4 /* UIView-Shimmer */ = {
 			isa = PBXGroup;
 			children = (
-				17C09BFA25B167D900330061 /* Models */,
+				17F758F325B9FD0100EAB0EC /* Sources */,
 				17A5980725AB1A8500CEC83B /* Resources */,
-				17FE78F325A8F42400E29BF4 /* UIView+Extensions */,
 				17FE78A625A8E65000E29BF4 /* UIView_Shimmer.h */,
 			);
 			path = "UIView-Shimmer";
