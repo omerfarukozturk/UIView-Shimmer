@@ -4,10 +4,9 @@
 <h4 align="center">Super easy way to apply shimmering effect to any view and its subviews for iOS applications.</h4>
 <br>
 <p align="center">
-    <a href="https://travis-ci.com/omerfarukozturk/UIView-Shimmer"><img src="https://travis-ci.com/omerfarukozturk/UIView-Shimmer.svg?token=JVcAj8G17QJpMKZwksky&branch=master"/></a>
+    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/workflows/Swift%20CI/badge.svg"/>
     <a href="https://www.codacy.com/gh/omerfarukozturk/UIView-Shimmer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omerfarukozturk/UIView-Shimmer&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/83ee6e94d8774d029e297503016c9b16"/></a>
     <a href="https://www.codacy.com/gh/omerfarukozturk/UIView-Shimmer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omerfarukozturk/UIView-Shimmer&amp;utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/83ee6e94d8774d029e297503016c9b16"/></a>
-    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/workflows/Swift%20CI/badge.svg"/>
     <img src="https://img.shields.io/badge/platform-ios-blue" alt="Platform: iOS"/>
     <img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License"/>
     <img src="https://img.shields.io/badge/pod-v1.0.2-blue" alt="CocaPods Compatible"/>
@@ -51,13 +50,7 @@ version: 1.0.2
 ```
 
 ### Manuel
-If you do not want to add extra dependency, just copy related extensions to your project.
-
-```
-UIView+Extensions.swift
-UIView+Template.swift
-UIView+Shimmer.swift
-```
+If you do not want to add extra dependency, just copy `Sources` folder under `UIView-Shimmer` project into your project.
 
 ## Usage 
 
