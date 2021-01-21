@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License"/>
     <img src="https://img.shields.io/badge/pod-v1.0.2-blue" alt="CocaPods Compatible"/>
     <img src="https://img.shields.io/badge/Carthage-compatible-brightgreen" alt="Carthage Compatible"/>
-    <img src="https://img.shields.io/badge/SPM-compatible-brightgreen" alt="CaSwift Package Manager Compatible"/>
+    <img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen" alt="CaSwift Package Manager Compatible"/>
 </p>
 
 <p align="center" vertical-align="center">
@@ -50,7 +50,7 @@ version: 1.0.2
 ```
 
 ### Manuel
-If you do not want to add extra dependency, just copy `Sources` folder under `UIView-Shimmer` project into your project.
+If you do not want to add extra dependency, just copy [Sources](Sources/UIView-Shimmer/Sources) folder into your project.
 
 ## Usage 
 
