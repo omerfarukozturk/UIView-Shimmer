@@ -1,13 +1,13 @@
 <p align="center">
-    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/uiview-shimmer.png" width="300"/>
+    <img src="https://raw.githubusercontent.com/omerfarukozturk/UIView-Shimmer/master/Resources/uiview-shimmer.png" width="300"/>
 </p>
 
 <h4 align="center">Super easy way to apply shimmering effect to any view and its subviews for iOS applications.</h4>
 <br>
 
 <p align="center" vertical-align="center">
-    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_default.png"/>
-    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animated.gif"/>
+    <img src="https://raw.githubusercontent.com/omerfarukozturk/UIView-Shimmer/master/Resources/template_default.png"/>
+    <img src="https://raw.githubusercontent.com/omerfarukozturk/UIView-Shimmer/master/Resources/shimmer_animated.gif"/>
 </p>
 
 
@@ -95,7 +95,7 @@ cell.setTemplateWithSubviews(template: false)
 
 Light Theme                | Dark Theme
 :-------------------------:|:-------------------------:
-![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animation_light.gif)  |  ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_animation_dark.gif)
+![](https://raw.githubusercontent.com/omerfarukozturk/UIView-Shimmer/master/Resources/shimmer_animation_light.gif)  |  ![](https://raw.githubusercontent.com/omerfarukozturk/UIView-Shimmer/master/Resources/shimmer_animation_dark.gif)
 
 #### Excluded Views
 
@@ -108,7 +108,7 @@ var excludedItems: Set<UIView> {
 ```
     
 <table><tr><td>
-    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/shimmer_excluded.png" />
+    <img src="https://raw.githubusercontent.com/omerfarukozturk/UIView-Shimmer/master/Resources/shimmer_excluded.png" />
 </td></tr></table>
 
 
@@ -124,7 +124,7 @@ view.setTemplateWithSubviews(true, animate: false)
 
 Default                | Template
 :-------------------------:|:-------------------------:
-![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_default.png)  |  ![](https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/template_on.png)
+![](https://raw.githubusercontent.com/omerfarukozturk/UIView-Shimmer/master/Resources/template_default.png)  |  ![](https://raw.githubusercontent.com/omerfarukozturk/UIView-Shimmer/master/Resources/template_on.png)
 
 ### Note
 Template view (and also Shimmering effect) frames are calculated based on their `intrinsicContentSize` or their layout constraints. So you should set dummy values for `UILabels`, `UITextView` etc. or set their constraints to visually draw their templates.
