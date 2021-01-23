@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/uiview-shimmer.png"/>
+    <img src="https://github.com/omerfarukozturk/UIView-Shimmer/blob/master/Resources/uiview-shimmer.png" width="300"/>
 </p>
 
 <h4 align="center">Super easy way to apply shimmering effect to any view and its subviews for iOS applications.</h4>
