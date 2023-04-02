@@ -13,7 +13,7 @@ extension UIView {
     /// - Parameters:
     ///     - animate: Specifies the animation is on/off.
     ///     - viewBackgroundColor: The `backgroudColor` of specified views superview.
-    func setShimmeringAnimation(_ animate: Bool, viewBackgroundColor: UIColor? = nil) {
+    func setShimmeringAnimation(_ animate: Bool, viewBackgroundColor: UIColor? = nil, animationSpeed: CGFloat) {
         let currentShimmerLayer = layer.sublayers?.first(where: { $0.name == Key.shimmer })
         if animate {
             if currentShimmerLayer != nil { return }
@@ -47,7 +47,7 @@ extension UIView {
         animation.fromValue = [-1.0, -0.5, 0.0]
         animation.toValue = [1.0, 1.5, 2.0]
         animation.repeatCount = .infinity
-        animation.duration = 1.25
+        animation.duration = animationSpeed
         gradientLayer.add(animation, forKey: animation.keyPath)
     }
 }
