@@ -62,7 +62,8 @@ extension UIView {
         allTemplateViews.forEach {
             $0.setTemplate(template, baseColor: color)
             if animate {
-                $0.setShimmeringAnimation(template, viewBackgroundColor: viewBackgroundColor, animationSpeed: animationSpeed)
+                $0.setShimmeringAnimation(template, viewBackgroundColor: viewBackgroundColor,
+            animationSpeed: animationSpeed)
             }
         }
     }
