@@ -58,11 +58,13 @@ extension UIView {
     public func setTemplateWithSubviews(_ template: Bool,
                                         color: UIColor? = nil,
                                         animate: Bool = true,
-                                        viewBackgroundColor: UIColor? = nil) {
+                                        viewBackgroundColor: UIColor? = nil,
+                                        animationSpeed: CGFloat = 1.25) {
         allTemplateViews.forEach {
             $0.setTemplate(template, baseColor: color)
             if animate {
-                $0.setShimmeringAnimation(template, viewBackgroundColor: viewBackgroundColor)
+                $0.setShimmeringAnimation(template, viewBackgroundColor: viewBackgroundColor,
+            animationSpeed: animationSpeed)
             }
         }
     }
