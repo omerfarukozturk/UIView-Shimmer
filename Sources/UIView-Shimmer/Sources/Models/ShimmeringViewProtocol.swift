@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol ShimmeringViewProtocol where Self: UIView {
+@objc public protocol ShimmeringViewProtocol where Self: UIView {
     var shimmeringAnimatedItems: [UIView] { get }
     var excludedItems: Set<UIView> { get }
 }
