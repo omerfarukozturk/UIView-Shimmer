@@ -24,7 +24,8 @@ let package = Package(
         .target(
             name: "UIView-Shimmer",
             dependencies: [],
-            exclude: ["Resources/Info.plist"]),
+            exclude: ["Resources/Info.plist"],
+            resources: [.process("Resources/PrivacyInfo.xcprivacy")]),
         .testTarget(
             name: "UIView-ShimmerTests",
             dependencies: ["UIView-Shimmer"],

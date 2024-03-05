@@ -21,6 +21,8 @@ Mark any UIView element as template view and add shimmering effect on it with si
 
   spec.source_files  = "Sources/UIView-Shimmer/**/*.{h,m,swift}"
 
+  spec.resources = 'UIView-Shimmer/Resources/PrivacyInfo.xcprivacy'
+
 
   # spec.public_header_files = "Classes/**/*.h"
 
