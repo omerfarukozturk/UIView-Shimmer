@@ -24,6 +24,7 @@
 		17FE78E225A8ED5A00E29BF4 /* UIView+Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE78E125A8ED5A00E29BF4 /* UIView+Template.swift */; };
 		17FE78EA25A8ED8D00E29BF4 /* UIView+Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE78E925A8ED8D00E29BF4 /* UIView+Shimmer.swift */; };
 		17FE78EF25A8F42000E29BF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE78EE25A8F42000E29BF4 /* Constants.swift */; };
+		3668EC5E2BD650FB00EAE821 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3668EC5D2BD650FB00EAE821 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		17FE78E125A8ED5A00E29BF4 /* UIView+Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Template.swift"; sourceTree = "<group>"; };
 		17FE78E925A8ED8D00E29BF4 /* UIView+Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmer.swift"; sourceTree = "<group>"; };
 		17FE78EE25A8F42000E29BF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3668EC5D2BD650FB00EAE821 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		17A5980725AB1A8500CEC83B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3668EC5D2BD650FB00EAE821 /* PrivacyInfo.xcprivacy */,
 				17FE78A725A8E65000E29BF4 /* Info.plist */,
 			);
 			path = Resources;
@@ -310,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3668EC5E2BD650FB00EAE821 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
